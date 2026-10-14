@@ -101,20 +101,9 @@
                 <StackPanel Grid.Column="1"
                             VerticalAlignment="Center"
                             Margin="12,0,12,0">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Agent HUD"
-                                   FontSize="14"
-                                   FontWeight="SemiBold" />
-                        <Border Margin="8,0,0,0"
-                                Padding="6,2"
-                                CornerRadius="7"
-                                Background="#18FFFFFF">
-                            <TextBlock Text="DEMO"
-                                       FontSize="9"
-                                       FontWeight="SemiBold"
-                                       Foreground="#AEB7C3" />
-                        </Border>
-                    </StackPanel>
+                    <TextBlock Text="Agent HUD"
+                               FontSize="14"
+                               FontWeight="SemiBold" />
                     <TextBlock Text="{Binding SummaryText}"
                                Margin="0,3,0,0"
                                FontSize="12"
@@ -153,7 +142,7 @@
                             <TextBlock Text="Agent sessions"
                                        FontSize="17"
                                        FontWeight="SemiBold" />
-                            <TextBlock Text="Local preview · demo data only"
+                            <TextBlock Text="Local monitor · read-only"
                                        Margin="0,3,0,0"
                                        FontSize="11"
                                        Foreground="#8F99A6" />
@@ -253,7 +242,7 @@
 
                     <TextBlock Grid.Row="2"
                                Margin="2,8,2,2"
-                               Text="Real Codex / Claude adapters are the next milestone."
+                               Text="Codex local discovery enabled · quota, approvals and Claude are next."
                                FontSize="10"
                                Foreground="#737E8B"
                                HorizontalAlignment="Center" />
