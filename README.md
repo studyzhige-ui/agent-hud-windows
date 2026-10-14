@@ -4,7 +4,7 @@ A native Windows companion for local AI coding agents, inspired by the interacti
 
 ## Status
 
-Early prototype. The current desktop shell uses clearly labeled demo data. Real Codex and Claude Code provider integrations are not implemented yet.
+Early prototype. Native Windows Codex rollout discovery is implemented as a read-only provider. Codex quota/approvals, WSL and Claude Code are not implemented yet. The project has not yet been runtime-validated on a Windows machine.
 
 ## Current prototype
 
@@ -12,7 +12,8 @@ Early prototype. The current desktop shell uses clearly labeled demo data. Real 
 - Compact and expanded session views.
 - System tray recovery and exit controls.
 - Local session aggregation contract with explicit provider capabilities.
-- Demo Codex / Claude session cards to validate information hierarchy.
+- Read-only native Windows Codex session discovery from local rollout JSONL.
+- Optional demo Codex / Claude cards when AGENT_HUD_DEMO=1.
 - Windows CI build using .NET 10 LTS.
 - Apple-inspired design principles adapted to Windows behavior and accessibility.
 
@@ -23,6 +24,11 @@ Prerequisites: Windows, .NET 10 SDK. Visual Studio 2026 with the .NET desktop de
     dotnet restore src/AgentHud.Desktop/AgentHud.Desktop.csproj
     dotnet run --project src/AgentHud.Desktop/AgentHud.Desktop.csproj
 
+To preview mock cards as well:
+
+    set AGENT_HUD_DEMO=1
+    dotnet run --project src/AgentHud.Desktop/AgentHud.Desktop.csproj
+
 ## Repository map
 
 - docs/PRODUCT.md — product definition and delivery gates.
@@ -30,11 +36,13 @@ Prerequisites: Windows, .NET 10 SDK. Visual Studio 2026 with the .NET desktop de
 - docs/ARCHITECTURE.md — application and provider architecture.
 - src/AgentHud.Contracts — stable session/provider contracts.
 - src/AgentHud.App — provider aggregation and application services.
-- src/AgentHud.Desktop — WPF HUD, tray and demo provider.
+- src/AgentHud.Desktop — WPF HUD, tray and optional demo provider.
+- src/AgentHud.Providers.Codex — read-only Codex rollout discovery and lifecycle parsing.
+- docs/CODEX_PROVIDER.md — current Codex data-access boundary and state semantics.
 
 ## Next milestone
 
-Replace demo observations with a real Codex provider, including evidence-based session discovery, freshness metadata, failure handling and Windows/WSL distinction. Claude Code follows once the Codex contract has been validated.
+Runtime-validate the native Windows Codex reader, then add session-index names and app-server quota reads. WSL discovery, Codex approvals and Claude Code follow as separate capabilities so unsupported data is never fabricated.
 
 ## Design and attribution
 
