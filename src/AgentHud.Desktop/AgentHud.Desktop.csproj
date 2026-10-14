@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>AgentHud</AssemblyName>
+    <RootNamespace>AgentHud.Desktop</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AgentHud.App\AgentHud.App.csproj" />
+    <ProjectReference Include="..\AgentHud.Contracts\AgentHud.Contracts.csproj" />
+  </ItemGroup>
+</Project>
