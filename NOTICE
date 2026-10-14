@@ -1,0 +1,13 @@
+Agent HUD for Windows
+Copyright 2026 Agent HUD for Windows contributors
+
+This project is an original Windows implementation inspired by the product
+concept of Agent HUD Open:
+https://github.com/jazzenchen/agent-hud-open
+
+At the time this notice was added, no upstream source code had been copied
+into this repository. If upstream Apache-2.0 source is adapted later, its
+required copyright and attribution notices must be added here.
+
+Apple design documentation is used only as a design-study reference. Apple
+assets, fonts, trademarks, and UI kits are not redistributed by this project.
